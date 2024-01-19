@@ -5,7 +5,7 @@ import {z} from "zod"
 import {
   Form,
   FormControl,
-  FormDescription,
+
   FormField,
   FormItem,
   FormLabel,
@@ -16,6 +16,7 @@ import { Signupvalidation } from "@/lib/Validation"
 
 
 const SignupForm = () => {
+  const isloading = true;
 
   const form = useForm<z.infer<typeof Signupvalidation>>({
     resolver: zodResolver(Signupvalidation),
@@ -42,8 +43,8 @@ const SignupForm = () => {
         <h2 className="h3-bold md:h2-bold pt-2 sm:pt-6">Create your account</h2>
         <p className="text-light-3 mt-2 small-medium mb-10 md:base-regular">To use Miagram Enter your details</p>
 
-    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-      <FormField
+    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1">
+    {/* <FormField
         control={form.control}
         name="username"
         render={({ field }) => (
@@ -55,7 +56,7 @@ const SignupForm = () => {
             <FormMessage />
           </FormItem>
         )}
-      />
+      /> */}
 
 <FormField
         control={form.control}
@@ -102,7 +103,13 @@ const SignupForm = () => {
 
 
       
-      <Button type="submit">Submit</Button>
+      <Button type="submit" className="shad-button_primary w-full flex items-center justify-center mt-[100px]">
+      {isloading ? (
+        <div className="flex-center gap-2">
+          Loading ...
+        </div>
+      ) : "Sign Up"}
+      </Button>
     </form>
     </div>
   </Form>
