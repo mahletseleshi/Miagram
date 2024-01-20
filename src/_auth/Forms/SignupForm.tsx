@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import {z} from "zod"
+import Loader from "@/components/shared/Loader"
 import {
   Form,
   FormControl,
@@ -94,7 +95,7 @@ const SignupForm = () => {
           <FormItem>
             <FormLabel>Password</FormLabel>
             <FormControl>
-              <Input type="password"className="shad-input"{...field} />
+              <Input type="password"className="shad-input mb-7"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -106,7 +107,7 @@ const SignupForm = () => {
       <Button type="submit" className="shad-button_primary w-full flex items-center justify-center mt-[100px]">
       {isloading ? (
         <div className="flex-center gap-2">
-          Loading ...
+          <Loader />
         </div>
       ) : "Sign Up"}
       </Button>
