@@ -93,7 +93,7 @@ const SignupForm = () => {
         name="password"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Password</FormLabel>
+            <FormLabel>Passwor</FormLabel>
             <FormControl>
               <Input type="password"className="shad-input mb-7"{...field} />
             </FormControl>
