@@ -14,10 +14,11 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Signupvalidation } from "@/lib/Validation"
+import { Link } from "react-router-dom"
 
 
 const SignupForm = () => {
-  const isloading = true;
+  const isloading = false;
 
   const form = useForm<z.infer<typeof Signupvalidation>>({
     resolver: zodResolver(Signupvalidation),
@@ -30,10 +31,8 @@ const SignupForm = () => {
   })
  
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof Signupvalidation>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof Signupvalidation>) {
+    const newuser = await createUserAccount
   }
 
 
@@ -107,10 +106,14 @@ const SignupForm = () => {
       <Button type="submit" className="shad-button_primary w-full flex items-center justify-center mt-[100px]">
       {isloading ? (
         <div className="flex-center gap-2">
-          <Loader />
+          <Loader /> Loading....
         </div>
       ) : "Sign Up"}
       </Button>
+
+      <p className="text-small-regular text-center text-light-2 mt-2">
+        Already have an account? <Link to ="/sign-up" className="text-small-semibold text-primary-500 ml-1"> Log In</Link>
+      </p>
     </form>
     </div>
   </Form>
