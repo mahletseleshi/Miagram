@@ -6,7 +6,6 @@ import Loader from "@/components/shared/Loader"
 import {
   Form,
   FormControl,
-
   FormField,
   FormItem,
   FormLabel,
@@ -63,7 +62,7 @@ const SignupForm = () => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Nameee</FormLabel>
             <FormControl>
               <Input type="text"className="shad-input"{...field} />
             </FormControl>
@@ -112,7 +111,7 @@ const SignupForm = () => {
       </Button>
 
       <p className="text-small-regular text-center text-light-2 mt-2">
-        Already have an account? <Link to ="/sign-up" className="text-small-semibold text-primary-500 ml-1"> Log In</Link>
+        Already have an account? <Link to ="/sign-in" className="text-small-semibold text-primary-500 ml-1"> Log In</Link>
       </p>
     </form>
     </div>
