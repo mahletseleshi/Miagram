@@ -62,7 +62,7 @@ const SignupForm = () => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Nameee</FormLabel>
+            <FormLabel>Nameeeee</FormLabel>
             <FormControl>
               <Input type="text"className="shad-input"{...field} />
             </FormControl>
