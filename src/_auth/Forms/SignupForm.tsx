@@ -80,7 +80,7 @@ const SignupForm = () => {
         name="email"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Email</FormLabel>
+            <FormLabel>Emaill</FormLabel>
             <FormControl>
               <Input type="email"className="shad-input"{...field} />
             </FormControl>
