@@ -82,7 +82,7 @@ const SignupForm = () => {
           <FormItem>
             <FormLabel>Emailll</FormLabel>
             <FormControl>
-              <Input type="email"className="shad-input"{...field} />
+              <Input type="emaill"className="shad-input"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
